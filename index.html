@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Karolína Dohnalová" />
+    <meta name="description" content="Projekt Pojištěnci Karolína Dohnalová" />
+    <meta name="keywords" content="projekt, aplikace, Karolína Dohnalová" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styly.css" type="text/css" />
+    <title>Pojištěnci</title>
+</head>
+    <body>
+        <header>
+            <div>
+                <h1>Evidence pojištěnců</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="aktivni">Registrace</a></li>
+                    <li><a href="O Aplikaci.html">O aplikaci</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="sectionPojisteni">
+            <article class="novyPojistenec">
+                <h2>Nový pojištěnec</h2>
+            
+                <img src="obrazky/Person.png" class="avatar" alt="Pojištěnec" />       
+            
+                <form id="novy-zaznam">
+                    <div class="input-container">
+                        <label for="jmeno">Křestní jméno:</label>
+                        <input type="text" id="jmeno" placeholder="Jan" />
+                    </div>
+          
+                    <div class="input-container">
+                        <label for="prijmeni">Příjmení:</label>
+                        <input type="text" id="prijmeni" placeholder="Novák" />
+                    </div>
+          
+                    <div class="input-container">
+                        <label for="vek">Věk:</label>
+                        <input type="number" id="vek" placeholder="33" />
+                    </div>
+          
+                    <div class="input-container">
+                        <label for="telefon">Telefonní číslo:</label>
+                        <input type="text" id="telefon" placeholder="+ 420 333 444 555" />
+                    </div>
+          
+                    <button id="ulozit" class="ulozit" type="submit">Vytvořit pojištěného</button>
+                </form>
+                <div class="cistic"></div>
+            </article>
+        
+            <h2 class="nadpisPojisteni">Seznam pojištěných</h2>
+            
+            <article class="seznamPojistenych">
+                <ul id="pojisteni-list" class="pojisteni-list"></ul>            
+            </article>
+        
+        </section>
+
+        <footer>
+            Vytvořila &copy;Karolína Dohnalová 
+        </footer> 
+
+        <script src="js/Pojisteny.js"></script>
+        <script src="js/PojisteniApp.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const pojisteniApp = new PojisteniApp();
+            });
+        </script>
+    </body>
+</html>
